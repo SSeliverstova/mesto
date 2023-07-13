@@ -1,0 +1,15 @@
+.popup__field-description {
+  border: 0;
+  width: 100%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 30px 0 0;
+  padding: 10px 0;
+}
+
+.popup__field-description:focus {
+  outline-color: #318ffad0;
+ }

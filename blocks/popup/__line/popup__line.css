@@ -1,0 +1,13 @@
+.popup__line {
+  margin: 0;
+  width: 100%;
+  max-height: 0;
+  border: 1px solid #000;
+  opacity: 0.2;
+}
+
+@media screen and (max-width: 580px) {
+  .popup__edit {
+    margin: 10px 0 0;
+  }
+}

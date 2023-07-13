@@ -1,0 +1,14 @@
+.info__icon {
+  max-width: 10px;
+  max-height: 10px;
+  color: #fff;
+  margin: 7px;
+}
+
+@media screen and (max-width: 580px) {
+  .info__icon {
+    max-width: 7.5px;
+    max-height: 7.5px;
+    margin: 5.25px;
+  }
+}
