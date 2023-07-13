@@ -16,5 +16,5 @@
 
 **Ссылка на GitHub Pages**
 
-* [Ссылка на GitHub Pages](https://sseliverstova.github.io/russian-travel/)
+* [Ссылка на GitHub Pages](https://sseliverstova.github.io/mesto/)
 
