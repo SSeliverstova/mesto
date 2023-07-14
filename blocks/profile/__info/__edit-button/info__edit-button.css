@@ -8,6 +8,7 @@
   border: 1px solid #fff;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+  padding: 7px;
 }
 
 .info__edit-button:hover {
@@ -18,5 +19,6 @@
   .info__edit-button {
     max-width: 18px;
     max-height: 18px;
+    padding: 5.25px;
   }
 }
