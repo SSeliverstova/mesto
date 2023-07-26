@@ -4,18 +4,19 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: 880px;
-  padding: 45px 0 0;
+  padding: 45px 0 41px;
+  border-bottom: 1px solid rgb(84,84,84, 0.7);
 }
 
 @media screen and (max-width: 920px) {
   .header {
     max-width: 100%;
-    padding: 35px 40px 0;
+    padding: 35px 40px 41px;
   }
 }
 
 @media screen and (max-width: 580px) {
   .header {
-    padding: 28px 19px 27px;
+    padding: 28px 27px 31.6px;
   }
 }

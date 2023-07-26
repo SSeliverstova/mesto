@@ -10,6 +10,7 @@
   border: 2px solid #fff;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+  border-radius: 2px;
 }
 
 .profile__add-button:hover {

@@ -4,7 +4,7 @@
   max-height: 50px;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter';
+  font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -17,6 +17,7 @@
   padding-top: 14px;
   padding-bottom: 14px;
   cursor: pointer;
+  border-radius: 2px;
 }
 
 .popup__submit-button:hover {
@@ -26,5 +27,8 @@
 @media screen and (max-width: 580px) {
   .popup__submit-button {
     margin: 45px 0 0;
+    max-height: 46px;
+    font-size: 14px;
+    line-height: 17px;
   }
 }

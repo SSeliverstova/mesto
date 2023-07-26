@@ -1,18 +1,29 @@
 .info__about {
   color: #fff;
-  font-family: 'Inter';
+  font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   margin: 0;
   padding: 0;
+  text-overflow: ellipsis;
+  max-width: 430px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 920px) {
   .info__about {
     font-size: 16px;
     line-height: 19px;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .info__about {
+    max-width: 250px;
   }
 }
 
@@ -20,5 +31,18 @@
   .info__about {
     font-size: 14px;
     line-height: 16.94px;
+    max-width: 210px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .info__about {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .info__about {
+    max-width: 230px;
   }
 }

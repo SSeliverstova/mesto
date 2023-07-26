@@ -4,3 +4,11 @@
   color: #fff;
   margin: 14px auto;
 }
+
+@media screen and (max-width: 580px) {
+  .profile__plus {
+    max-width: 16px;
+    max-height: 16px;
+    margin: 17px auto;
+  }
+}
