@@ -1,4 +1,3 @@
-// 
 const popupElement = document.querySelector('.popup');
 const popupContainer = popupElement.querySelector('.popup__container');
 const formElement = popupElement.querySelector('.popup__form');
