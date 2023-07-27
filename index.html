@@ -12,7 +12,6 @@
 
     <header class="header">
       <img src="./images/logo.svg" alt="Лого Mesto" class="header__logo">
-      <div class="header__line"></div>
     </header>
   
     <!--основное содержимое-->
@@ -95,14 +94,17 @@
     <!--секция popup-->
 
     <div class="popup">
-      <form name="popupForm" class="popup__container">
-        <button type="reset" class="popup__close-icon"></button>
-        <h2 class="popup__edit">Редактировать профиль</h2>
-        <input name="name" type="text" class="popup__field popup__field_type_name">
-        <input name="description" type="text" class="popup__field popup__field_type_description">
-        <button type="submit" class="popup__submit-button">Сохранить</button>
-      </form>
+      <div class="popup__container">
+        <button type="button" class="popup__close-icon"></button>
+        <form name="popupForm" class="popup__form">
+          <h2 class="popup__edit">Редактировать профиль</h2>
+          <input name="name" type="text" class="popup__field popup__field_type_name" placeholder="Жак-Ив Кусто" required>
+          <input name="description" type="text" class="popup__field popup__field_type_description" 
+            placeholder="Исследователь океана" required>
+          <button type="submit" class="popup__submit-button">Сохранить</button>
+        </form>
+      </div>
     </div>
-    <script src="./pages/index.js"></script>
+    <script src="./components/index.js"></script>
 </body>
 </html>
