@@ -1,4 +1,4 @@
-const popupElementEditProfile = document.querySelector('.popup__edit-profile');
+const popupElementEditProfile = document.querySelector('.popup_type_edit-profile');
 const popupContainerEditProfile = popupElementEditProfile.querySelector('.popup__container');
 const formElementEditProfile = popupElementEditProfile.querySelector('.popup__form');
 let closeIconEditProfile = popupContainerEditProfile.querySelector('.popup__close-icon');
@@ -8,7 +8,7 @@ let infoAbout = document.querySelector('.info__about');
 let nameInput = formElementEditProfile.querySelector('.popup__field_type_name');
 let jobInput = formElementEditProfile.querySelector('.popup__field_type_description');
 
-const popupElementAddCards = document.querySelector('.popup__add-cards');
+const popupElementAddCards = document.querySelector('.popup_type_add-cards');
 const popupContainerAddCards = popupElementAddCards.querySelector('.popup__container');
 const formElementAddCards = popupElementAddCards.querySelector('.popup__form');
 let closeIconAddCards = popupContainerAddCards.querySelector('.popup__close-icon');
@@ -16,7 +16,7 @@ const addButton = document.querySelector('.profile__add-button');
 let nameCard = formElementAddCards.querySelector('.popup__field_type_card-name');
 let linkCard = formElementAddCards.querySelector('.popup__field_type_card-link');
 
-const popupElementPhoto = document.querySelector('.popup__photo');
+const popupElementPhoto = document.querySelector('.popup_type_photo');
 const popupContainerPhoto = popupElementPhoto.querySelector('.popup__container');
 let closeIconPhoto = popupContainerPhoto.querySelector('.popup__close-icon');
 let photoName = popupContainerPhoto.querySelector('.popup__photo-name');
