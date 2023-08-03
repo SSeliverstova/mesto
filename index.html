@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
+  <script defer src="./components/constants.js"></script>
+  <script defer src="./components/index.js"></script>
   <title>Научиться учиться</title>
 </head>
 <body class="body">
@@ -37,6 +39,7 @@
       </section>
 
       <!--секция elements-->
+
       <section class="elements">
 
       </section>
@@ -54,53 +57,6 @@
         </div>
       </template> 
 
-      <!--<section class="elements">
-        <div class="element">
-          <div class="element__position">
-            <img src="./images/karachaevsk.jpg" alt="Фото Карачаево-Черкессии" class="element__image">
-          </div>
-          <div class="element__rectangle">
-            <h2 class="element__text">Карачаевск</h2>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__position"><img src="./images/dombay.jpg" alt="Фото Домбая" class="element__image"></div>
-          <div class="element__rectangle">
-            <h2 class="element__text">Домбай</h2>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__position"><img src="./images/elbrus.jpg" alt="Фото Эльбруса" class="element__image"></div>
-          <div class="element__rectangle">
-            <h2 class="element__text">Гора Эльбрус</h2>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__position"><img src="./images/uzbekistan.jpg" alt="Фото Бухары" class="element__image"></div>
-          <div class="element__rectangle">
-            <h2 class="element__text">Узбекистан</h2>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__position"><img src="./images/egypt.jpg" alt="Фото Гизы" class="element__image"></div>
-          <div class="element__rectangle">
-            <h2 class="element__text">Гиза, Египет</h2>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <div class="element__position"><img src="./images/italy.jpg" alt="Фото Чинкве-Терре" class="element__image"></div>
-          <div class="element__rectangle">
-            <h2 class="element__text">Чинкве-Терре, Италия</h2>
-            <button type="button" class="element__like"></button>
-          </div>
-        </div>
-      </section>-->
-
     </main>
 
     <!--подвал-->
@@ -116,9 +72,9 @@
         <button type="button" class="popup__close-icon"></button>
         <form name="popupForm" class="popup__form">
           <h2 class="popup__edit">Редактировать профиль</h2>
-          <input name="name" type="text" class="popup__field popup__field_type_name" placeholder="Жак-Ив Кусто" required>
+          <input name="name" type="text" class="popup__field popup__field_type_name" placeholder="Имя" required>
           <input name="description" type="text" class="popup__field popup__field_type_description" 
-            placeholder="Исследователь океана" required>
+            placeholder="О себе" required>
           <button type="submit" class="popup__submit-button">Сохранить</button>
         </form>
       </div>
@@ -129,7 +85,7 @@
         <form name="popupForm" class="popup__form">
           <h2 class="popup__new-place">Новое место</h2>
           <input name="name" type="text" class="popup__field popup__field_type_card-name" placeholder="Название" required>
-          <input name="description" type="text" class="popup__field popup__field_type_card-link" 
+          <input name="description" type="url" class="popup__field popup__field_type_card-link" 
             placeholder="Ссылка на картинку" required>
           <button type="submit" class="popup__submit-button">Создать</button>
         </form>
@@ -142,6 +98,5 @@
         <img src="любая картинка" alt="Фото" class="popup__image">
       </div>
     </div>
-    <script src="./components/index.js"></script>
 </body>
 </html>
