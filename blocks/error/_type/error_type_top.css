@@ -1,0 +1,10 @@
+.error_type_top {
+  left: 0;
+  top: 106px;
+}
+
+@media screen and (max-width: 580px) {
+  .error_type_top {
+    top: 125px;
+  }
+}

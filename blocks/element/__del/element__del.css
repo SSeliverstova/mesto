@@ -8,6 +8,7 @@
   border: none;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
 }
 
 .element__del:hover {

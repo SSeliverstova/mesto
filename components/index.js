@@ -17,6 +17,7 @@ const closeIconAddCards = popupContainerAddCards.querySelector('.popup__close-ic
 const addButton = document.querySelector('.profile__add-button');
 const nameCard = formElementAddCards.querySelector('.popup__field_type_card-name');
 const linkCard = formElementAddCards.querySelector('.popup__field_type_card-link');
+const submitButton = formElementAddCards.querySelector('.popup__submit-button');
 
 const popupElementPhoto = document.querySelector('.popup_type_photo');
 const popupContainerPhoto = popupElementPhoto.querySelector('.popup__container');
@@ -24,15 +25,18 @@ const closeIconPhoto = popupContainerPhoto.querySelector('.popup__close-icon');
 const photoName = popupContainerPhoto.querySelector('.popup__photo-name');
 const photoImage = popupContainerPhoto.querySelector('.popup__image');
 
+const codeEsc = 27;
 
 const cards = document.querySelector('.elements');
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keyup', closeByEsc(popup));
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keyup', closeByEsc(popup));
 }
 
 function editProfile() {
@@ -44,6 +48,8 @@ function editProfile() {
 function addCard() {
   formElementAddCards.reset();
   openPopup(popupElementAddCards);
+  submitButton.classList.add('popup__submit-button_disabled');
+  submitButton.disabled = 'disabled';
 }
 
 addButton.addEventListener ('click', addCard);
@@ -110,7 +116,7 @@ function openImage (image, text) {
 // закрытие попапов по оверлэй
 
 popups.forEach(function(popupElement) {
-  popupElement.addEventListener('click', function(evt) {
+  popupElement.addEventListener('mousedown', function(evt) {
     if (evt.target == popupElement) {
       evt.preventDefault();
       closePopup(popupElement);
@@ -120,10 +126,10 @@ popups.forEach(function(popupElement) {
 
 // закрытие попапов по escape
 
-popups.forEach(function(popupElement) {
-  document.addEventListener('keyup', function(evt) {
-    if (evt.keyCode == 27) {
-      closePopup(popupElement);
+function closeByEsc(popup) {
+  return function(evt) {
+    if (evt.keyCode == codeEsc) {
+      closePopup(popup);
     }
-  });
-})
+  }
+};
