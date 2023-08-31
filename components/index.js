@@ -1,4 +1,5 @@
-const popupElement = document.querySelector('.popup');
+const popupList = document.querySelectorAll('.popup');
+const popups = [...popupList];
 const popupElementEditProfile = document.querySelector('.popup_type_edit-profile');
 const popupContainerEditProfile = popupElementEditProfile.querySelector('.popup__container');
 const formElementEditProfile = popupElementEditProfile.querySelector('.popup__form');
@@ -93,7 +94,6 @@ formElementAddCards.addEventListener('submit', function(evt) {
 
 });
 
-
 initialCards.forEach((item) => {
   cards.prepend(createCard(item.link, item.name));
 })
@@ -107,4 +107,23 @@ function openImage (image, text) {
   photoName.textContent = text;
 }
 
+// закрытие попапов по оверлэй
 
+popups.forEach(function(popupElement) {
+  popupElement.addEventListener('click', function(evt) {
+    if (evt.target == popupElement) {
+      evt.preventDefault();
+      closePopup(popupElement);
+    }
+  });
+})
+
+// закрытие попапов по escape
+
+popups.forEach(function(popupElement) {
+  document.addEventListener('keyup', function(evt) {
+    if (evt.keyCode == 27) {
+      closePopup(popupElement);
+    }
+  });
+})
