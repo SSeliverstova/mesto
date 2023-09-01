@@ -1,5 +1,6 @@
 const popupList = document.querySelectorAll('.popup');
 const popups = [...popupList];
+
 const popupElementEditProfile = document.querySelector('.popup_type_edit-profile');
 const popupContainerEditProfile = popupElementEditProfile.querySelector('.popup__container');
 const formElementEditProfile = popupElementEditProfile.querySelector('.popup__form');
@@ -31,12 +32,12 @@ const cards = document.querySelector('.elements');
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  document.addEventListener('keyup', closeByEsc(popup));
+  document.addEventListener('keyup', closeByEsc);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-  document.removeEventListener('keyup', closeByEsc(popup));
+  document.removeEventListener('keyup', closeByEsc);
 }
 
 function editProfile() {
@@ -126,10 +127,9 @@ popups.forEach(function(popupElement) {
 
 // закрытие попапов по escape
 
-function closeByEsc(popup) {
-  return function(evt) {
-    if (evt.keyCode == codeEsc) {
-      closePopup(popup);
-    }
+function closeByEsc(evt) {
+  if (evt.keyCode == codeEsc) {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup); 
   }
-};
+}
