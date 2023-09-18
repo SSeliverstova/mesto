@@ -29,7 +29,6 @@ export class FormValidator {
       errorElement.textContent = inputElement.validationMessage;
       this._showInputError(inputElement, errorElement);
     }
-    console.log(errorElement)
   }
 
   _toggleButtonState(isActive) {
@@ -45,8 +44,6 @@ export class FormValidator {
   
   _setEventListeners() {
     const inputList = this._formElement.querySelectorAll(this._inputSelector);
-    console.log(inputList);
-   
     this._toggleButtonState(this._formElement.checkValidity());
   
     [...inputList].forEach((inputElement) => {
@@ -64,7 +61,6 @@ export class FormValidator {
   
   enableValidation() {
       this._setEventListeners();
-      
   }
 
 }

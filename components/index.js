@@ -5,10 +5,8 @@ import { FormValidator } from './FormValidator.js';
 
 const popupList = document.querySelectorAll('.popup');
 const popups = [...popupList];
-console.log(popups);
 const formList = document.querySelectorAll('.popup__form');
 const forms = [...formList];
-console.log(forms);
 
 const popupElementEditProfile = document.querySelector('.popup_type_edit-profile');
 const popupContainerEditProfile = popupElementEditProfile.querySelector('.popup__container');
@@ -36,8 +34,6 @@ const photoName = popupContainerPhoto.querySelector('.popup__photo-name');
 const photoImage = popupContainerPhoto.querySelector('.popup__image');
 
 const codeEsc = 27;
-
-const cards = document.querySelector('.elements');
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
@@ -112,7 +108,6 @@ popups.forEach(function(popupElement) {
     if (evt.target == popupElement) {
       evt.preventDefault();
       closePopup(popupElement);
-      console.log(popupElement);
     }
   });
 })
@@ -129,9 +124,7 @@ function closeByEsc(evt) {
 // включение валидации
 
 forms.forEach((formElement) => {
-  console.log(formElement);
   const form = new FormValidator(selectors, formElement);
-  console.log(form);
   form.enableValidation();
 })
 
