@@ -35,6 +35,9 @@ const photoImage = popupContainerPhoto.querySelector('.popup__image');
 
 const esc = "Escape";
 
+const profileValidator = new FormValidator(validationConfig, formElementEditProfile);
+const cardValidator = new FormValidator(validationConfig, formElementAddCards);
+
 function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keyup', closeByEsc);
@@ -54,8 +57,7 @@ function openEditProfilePopup() {
 function openAddCardPopup() {
   formElementAddCards.reset();
   openPopup(popupElementAddCards);
-  const form = new FormValidator(validationConfig, formElementAddCards);
-  form.disableButton();
+  cardValidator.disableButton();
 }
 
 function renameProfile (evt) {
@@ -123,9 +125,7 @@ popups.forEach(function(popupElement) {
 
 // включение валидации
 
-forms.forEach((formElement) => {
-  const form = new FormValidator(validationConfig, formElement);
-  form.enableValidation();
-})
+profileValidator.enableValidation();
+cardValidator.enableValidation();
 
 
