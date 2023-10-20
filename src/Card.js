@@ -1,10 +1,9 @@
-import { openImage } from './index.js';
-
 export class Card {
-  constructor(templateSelector, name, link) {
+  constructor({templateSelector, name, link, handleCardClick}) {
     this._templateSelector = templateSelector;
     this._name = name;
     this._link = link;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
@@ -46,6 +45,6 @@ export class Card {
 
     this._elementLike.addEventListener('click', () => {this._handleLikeCard();});
     this._elementDel.addEventListener('click', () => {this._deleteElement()});
-    this._elementImage.addEventListener('click', () => {openImage(this._link, this._name);});
+    this._elementImage.addEventListener('click', () => {this._handleCardClick(this._link, this._name);});
   }
 }
