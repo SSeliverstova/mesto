@@ -48,3 +48,4 @@ export class Card {
     this._elementImage.addEventListener('click', () => {this._handleCardClick(this._link, this._name);});
   }
 }
+

@@ -1,12 +1,12 @@
-import './pages/index.css';
-import { Card } from './Card.js';
-import { initialCards } from './constants.js';
-import { validationConfig } from './constants.js';
-import { FormValidator } from './FormValidator.js';
-import PopupWithImage from './PopupWithImage.js';
-import PopupWithForm from './PopupWithForm.js';
-import Section from './Section.js';
-import UserInfo from './UserInfo.js';
+import './index.css';
+import { Card } from '../components/Card.js';
+import { initialCards } from '../utils/constants.js';
+import { validationConfig } from '../utils/constants.js';
+import { FormValidator } from '../components/FormValidator.js';
+import PopupWithImage from '../components/PopupWithImage.js';
+import PopupWithForm from '../components/PopupWithForm.js';
+import Section from '../components/Section.js';
+import UserInfo from '../components/UserInfo.js';
 
 const popupElementEditProfile = document.querySelector('.popup_type_edit-profile');
 const popupContainerEditProfile = popupElementEditProfile.querySelector('.popup__container');
@@ -38,15 +38,14 @@ const createNewCard = (title, link) => {
   return cardElement;
 }
 
-const cardSection = new Section(
-  {items : initialCards,
+const cardSection = new Section({
   renderer : (card) => {
     cardSection.addItem(createNewCard(card.name, card.link))
   }},
   '.elements'
 )
 
-cardSection.renderElement()
+cardSection.renderItems(initialCards);
 popupElementPhoto.setEventListeners();
 
 // включение валидации
@@ -73,8 +72,9 @@ const popupEditProfile = new PopupWithForm({
 });
 
 infoIcon.addEventListener('click', () => {
-  nameInput.value = user.getUserInfo().name;
-  jobInput.value = user.getUserInfo().about;
+  const info = user.getUserInfo();
+  nameInput.value = info.name;
+  jobInput.value = info.about;
   popupEditProfile.open()
  });
 
@@ -87,14 +87,7 @@ const popupAddCards = new PopupWithForm({
   submitCallback : (data) => {
     data.title = nameCard.value
     data.link = linkCard.value;
-    const newCard = new Section(
-      {items : data,
-      renderer : (card) => {
-        newCard.addItem(createNewCard(card.name, card.link))
-      }},
-      '.elements'
-    )
-    newCard.addItem(createNewCard(data.title, data.link))
+    cardSection.addItem(createNewCard(data.title, data.link))
     popupAddCards.close();
   }
 });
