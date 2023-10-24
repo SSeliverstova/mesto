@@ -1,0 +1,20 @@
+.info__avatar-icon {
+  background-image: url("../../../images/big-pen.svg");
+  border-radius: 50%;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: .6s;
+  }
+  
+  .info__avatar-icon:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0);
+  }

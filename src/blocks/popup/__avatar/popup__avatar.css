@@ -1,0 +1,17 @@
+.popup__avatar {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 0 18px;
+  padding-right: 147.32px;
+}
+
+@media screen and (max-width: 580px) {
+  .popup__avatar {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0 8px 45px 0;
+  }
+}

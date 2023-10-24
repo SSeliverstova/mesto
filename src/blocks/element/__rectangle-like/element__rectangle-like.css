@@ -1,8 +1,8 @@
-.element__rectangle {
+.element__rectangle-like {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 0 21px 0;
+  padding: 23px 0 22px;
 }

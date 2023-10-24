@@ -25,6 +25,7 @@
 @import url(../blocks/info/__icon/info__icon.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
 @import url(../blocks/profile/__plus/profile__plus.css);
+@import url(../blocks/info/__avatar-icon/info__avatar-icon.css);
 
 /* секция elements */
 @import url(../blocks/elements/elements.css);
@@ -38,6 +39,8 @@
 @import url(../blocks/element/__like/element__like.css);
 @import url(../blocks/element/__like/_active/element__like_active.css);
 @import url(../blocks/element/__del/element__del.css);
+@import url(../blocks/element/__rectangle-like/element__rectangle-like.css);
+@import url(../blocks/element/__like-count/element__like-count.css);
 
 /* подвал */
 @import url(../blocks/footer/footer.css);
@@ -66,6 +69,11 @@
 @import url(../blocks/popup/__field/_type/popup__field_type_error.css);
 @import url(../blocks/popup/__photo-name/popup__photo-name.css);
 @import url(../blocks/popup/__image/popup__image.css);
+@import url(../blocks/popup/_type/popup_type_delete-card.css);
+@import url(../blocks/popup/_type/popup_type_change-avatar.css);
+@import url(../blocks/popup/__avatar/popup__avatar.css);
+@import url(../blocks/popup/__delete/popup__delete.css);
+@import url(../blocks/popup/__del-button/popup__del-button.css);
 
 /* валидация */
 @import url(../blocks/error/error.css);
