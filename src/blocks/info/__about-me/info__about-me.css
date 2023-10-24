@@ -8,8 +8,8 @@
 
 @media screen and (max-width: 580px) {
   .info__about-me {
-  column-gap: 10px;
-  justify-content: center;
-  transform: translateX(14px);
+    column-gap: 10px;
+    justify-content: center;
+    transform: translateX(14px);
   }
 }

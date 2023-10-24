@@ -1,51 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Научиться учиться</title>
-</head>
-<body class="body">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Научиться учиться</title>
+  </head>
+  <body class="body">
     <!--шапка-->
 
     <header class="header">
-      <img src="<%=require('./images/logo.svg')%>" alt="Лого Mesto" class="header__logo">
+      <img
+        src="<%=require('./images/logo.svg')%>"
+        alt="Лого Mesto"
+        class="header__logo"
+      />
     </header>
-  
+
     <!--основное содержимое-->
 
     <main class="content">
-
       <!--секция profile-->
 
       <section class="profile">
-        <img src="<%=require('./images/avatar.jpg')%>" alt="Ваше фото на аватарку" class="profile__avatar">
+        <img
+          src="<%=require('./images/avatar.jpg')%>"
+          alt="Ваше фото на аватарку"
+          class="profile__avatar"
+        />
         <button class="profile__avatar-icon"></button>
         <div class="info">
           <div class="info__about-me">
             <h1 class="info__name">Жак-Ив Кусто</h1>
             <button type="button" class="info__edit-button">
-              <img src="<%=require('./images/pen.svg')%>" alt="Кнопка для редактирования профиля" class="info__icon">
+              <img
+                src="<%=require('./images/pen.svg')%>"
+                alt="Кнопка для редактирования профиля"
+                class="info__icon"
+              />
             </button>
           </div>
           <p class="info__about">Исследователь океана</p>
         </div>
         <button type="button" class="profile__add-button">
-          <img src="<%=require('./images/plus.svg')%>" alt="Кнопка для добавления" class="profile__plus">
+          <img
+            src="<%=require('./images/plus.svg')%>"
+            alt="Кнопка для добавления"
+            class="profile__plus"
+          />
         </button>
       </section>
 
       <!--секция elements-->
 
-      <section class="elements">
-
-      </section>
+      <section class="elements"></section>
 
       <template id="#element" class="elements__template">
         <div class="element">
           <div class="element__position">
-            <img src="любая картинка" alt="Фото" class="element__image">
+            <img src="любая картинка" alt="Фото" class="element__image" />
             <button type="button" class="element__del"></button>
           </div>
           <div class="element__rectangle">
@@ -56,8 +68,7 @@
             </div>
           </div>
         </div>
-      </template> 
-
+      </template>
     </main>
 
     <!--подвал-->
@@ -73,12 +84,26 @@
         <button type="button" class="popup__close-icon"></button>
         <form name="popupForm" class="popup__form" novalidate>
           <h2 class="popup__edit">Редактировать профиль</h2>
-          <input name="name" type="text" class="popup__field popup__field_type_name" placeholder="Имя" 
-            minlength="2" maxlength="40" required>
+          <input
+            name="name"
+            type="text"
+            class="popup__field popup__field_type_name"
+            placeholder="Имя"
+            minlength="2"
+            maxlength="40"
+            required
+          />
           <span id="name-error" class="error error_type_top"></span>
-          <input name="description" type="text" class="popup__field popup__field_type_description" 
-            placeholder="О себе" minlength="2" maxlength="200" required>
-            <span id="description-error" class="error error_type_bottom"></span>
+          <input
+            name="description"
+            type="text"
+            class="popup__field popup__field_type_description"
+            placeholder="О себе"
+            minlength="2"
+            maxlength="200"
+            required
+          />
+          <span id="description-error" class="error error_type_bottom"></span>
           <button type="submit" class="popup__submit-button">Сохранить</button>
         </form>
       </div>
@@ -88,11 +113,23 @@
         <button type="button" class="popup__close-icon"></button>
         <form name="popupForm" class="popup__form" novalidate>
           <h2 class="popup__new-place">Новое место</h2>
-          <input name="title" type="text" class="popup__field popup__field_type_card-name" placeholder="Название" 
-            minlength="2" maxlength="30" required>
+          <input
+            name="title"
+            type="text"
+            class="popup__field popup__field_type_card-name"
+            placeholder="Название"
+            minlength="2"
+            maxlength="30"
+            required
+          />
           <span id="title-error" class="error error_type_top"></span>
-          <input name="link" type="url" class="popup__field popup__field_type_card-link" 
-            placeholder="Ссылка на картинку" required>
+          <input
+            name="link"
+            type="url"
+            class="popup__field popup__field_type_card-link"
+            placeholder="Ссылка на картинку"
+            required
+          />
           <span id="link-error" class="error error_type_bottom"></span>
           <button type="submit" class="popup__submit-button">Создать</button>
         </form>
@@ -102,7 +139,7 @@
       <div class="popup__container popup__container-photo">
         <button type="button" class="popup__close-icon"></button>
         <h2 class="popup__photo-name"></h2>
-        <img src="любая картинка" alt="Фото" class="popup__image">
+        <img src="любая картинка" alt="Фото" class="popup__image" />
       </div>
     </div>
     <!--popup удаления карточки-->
@@ -121,12 +158,17 @@
         <button type="button" class="popup__close-icon"></button>
         <form name="popupForm" class="popup__form" novalidate>
           <h2 class="popup__avatar">Обновить аватар</h2>
-          <input name="link" type="url" class="popup__field popup__field_type_card-link" 
-            placeholder="Ссылка на картинку" required>
-          <span id="avatar-error" class="error error_type_bottom"></span>
+          <input
+            name="avatar"
+            type="url"
+            class="popup__field popup__field_type_card-link"
+            placeholder="Ссылка на картинку"
+            required
+          />
+          <span id="avatar-error" class="error error_type_bottom-avatar"></span>
           <button type="submit" class="popup__submit-button">Сохранить</button>
         </form>
       </div>
     </div>
-</body>
+  </body>
 </html>

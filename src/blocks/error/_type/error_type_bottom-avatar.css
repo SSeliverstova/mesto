@@ -1,0 +1,10 @@
+.error_type_bottom-avatar {
+  left: 0;
+  top: 104px;
+}
+
+@media screen and (max-width: 580px) {
+  .error_type_bottom-avatar {
+    top: 180px;
+  }
+}
