@@ -25,7 +25,7 @@
 @import url(../blocks/info/__icon/info__icon.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
 @import url(../blocks/profile/__plus/profile__plus.css);
-@import url(../blocks/info/__avatar-icon/info__avatar-icon.css);
+@import url(../blocks/profile/__avatar-icon/profile__avatar-icon.css);
 
 /* секция elements */
 @import url(../blocks/elements/elements.css);
