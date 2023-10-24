@@ -60,4 +60,5 @@
 .error{color:red;font-family:Inter,Arial,sans-serif;font-size:12px;font-weight:400;line-height:15px;position:absolute;text-align:left}
 .error_type_top{left:0;top:106px}@media screen and (max-width:580px){.error_type_top{top:125px}}
 .error_type_bottom{left:0;top:162px}@media screen and (max-width:580px){.error_type_bottom{top:180px}}
+.error_type_bottom-avatar{left:0;top:104px}@media screen and (max-width:580px){.error_type_bottom-avatar{top:180px}}
 
